@@ -1,15 +1,36 @@
 .header {
+  border-bottom: 1px solid var(--third-background);
   @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
+  @media screen and (min-width: 768px) {
+    & .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
-.nav {
-  display: none;
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-right: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
-.header__address-list {
-  display: none;
-}
+
 .logo {
   color: var(--accent-color);
   font-family: var(--secondary-font-family);
@@ -26,6 +47,53 @@
 .logo_color {
   color: var(--title-text-color);
 }
+.header__logo {
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+.nav {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  color: var(--title-text-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.nav__link.active {
+  position: relative;
+  color: var(--accent-color);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: -33px;
+  }
+}
 .burger-button {
   background-color: transparent;
   border: none;
@@ -35,14 +103,70 @@
     width: 40px;
     height: 40px;
   }
-}
-.header__nav {
-  @media screen and (max-width: 767px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
+.header__address-list {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+  }
+}
+
+.header__address-item {
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+.header__address-link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.header__address-icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  cursor: pointer;
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+
+  .header__address-link:hover &,
+  .header__address-link:focus & {
+    fill: var(--accent-color);
+  }
+}
+
 .mobile-menu {
   position: fixed;
   z-index: 100;
@@ -112,7 +236,7 @@
 .address-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
-.address-list__link .address-list__link {
+.address-list__link {
   font-weight: 500;
   transition: color var(--transition-duration) var(--transition-timing-function);
 
@@ -152,123 +276,3 @@
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
-
-// .header {
-//   border-bottom: 1px solid var(--third-background);
-
-//   & .container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//   }
-// }
-
-// .logo {
-//   color: var(--accent-color);
-//   font-family: var(--secondary-font-family);
-//   font-size: 26px;
-//   font-weight: 700px;
-//   line-height: 1.19;
-// }
-// .header__logo {
-//   margin-right: 93px;
-// }
-
-// .logo_color {
-//   color: var(--title-text-color);
-//   // font-family: "Raleway", sans-serif;
-//   // font-size: 26px;
-//   // font-weight: 700px;
-//   // line-height: 1.19;
-// }
-
-// .header__nav {
-//   display: flex;
-//   justify-content: center;
-//   padding-top: 24px;
-//   padding-bottom: 25px;
-//   padding-right: 0;
-// }
-
-// .nav {
-//   display: flex;
-//   justify-content: center;
-//   padding-left: 0;
-// }
-
-// .nav__item:not(:last-child) {
-//   margin-right: 50px;
-// }
-
-// .nav__link {
-//   color: var(--title-text-color);
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 16px;
-//   letter-spacing: 0.02em;
-//   transition: color var(--transition-duration) var(--transition-timing-function);
-
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
-
-// .nav__link.active {
-//   position: relative;
-//   color: var(--accent-color);
-
-//   &::after {
-//     content: "";
-//     display: block;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: var(--accent-color);
-//     position: absolute;
-//     bottom: -33px;
-//   }
-// }
-
-// .header__address-list {
-//   display: flex;
-//   margin-left: auto;
-//   padding: 0;
-// }
-
-// .header__address-item {
-//   margin-right: 50px;
-// }
-
-// .header__address-link {
-//   color: var(--primary-text-color);
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   display: flex;
-//   text-align: center;
-//   align-items: center;
-//   transition: color var(--transition-duration) var(--transition-timing-function);
-
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
-
-// .header__address-icon {
-//   margin-right: 10px;
-//   fill: var(--primary-text-color);
-//   cursor: pointer;
-//   transition: fill var(--transition-duration) var(--transition-timing-function);
-
-//   .header__address-link:hover &,
-//   .header__address-link:focus & {
-//     fill: var(--accent-color);
-//   }
-// }

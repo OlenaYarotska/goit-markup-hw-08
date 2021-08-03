@@ -21,7 +21,7 @@
         <div class="header__nav container">
             <a class="logo header__logo" href="./index.html">Web<span class="logo_color">Studio</span> </a>
             <nav> 
-                <!--Навигация сайта-->
+                
                 <ul class="nav">
                     <li class="nav__item"><a class="nav__link active" href="./index.html">Студия</a></li>
                     <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
@@ -90,20 +90,19 @@
             </ul>
             </div>
         </div>
-    </header> 
+    </header>  
 
     <main>
-
-        <section class="hero">
             <!--Герой-->
+        <section class="hero">
             <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
             <button type="button"  data-modal-open class=" hero__button">Заказать услугу</button>
         </section>
 
-<!-- 
-        <section class="section"> -->
+
+        <section class="section"> 
             <!--<h2>Особенности</h2>-->
-            <!-- <div class="container">
+            <div class="container">
                 <ul class="features__list">
                     <li class="features__item">
                         <div class="features__wrapper">
@@ -163,36 +162,76 @@
                     </li>
                 </ul>
             </div>
-            </section> -->
+            </section> 
             
             
-<!--             
+            
             <section class="section activity">
                 <h2 class="activity__heading">Чем мы занимаемся</h2>
                 <div class="container">
                     <ul class="activity__list">
-                        <li class="activity__item"> <img src="./images/box-1.jpg" alt="Декстопные приложения" width="370"> 
+                        <li class="activity__item"> 
+                         <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/activity-1-1x.webp 1x, ./images/activity-1-2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/activity-1-1x.jpg 1x, ./images/activity-1-2x.jpg 2x">
+                            <img src="#" alt="Декстопные приложения">
+                        </picture> 
                         <div class="activity__list-thumb">
                             <p class="activity__text">Декстопные приложения</p>
                         </div></li>
-                        <li class="activity__item"> <img src="./images/box-2.jpg" alt="Мобильные приложения" width="370"> 
+                        <li class="activity__item"> 
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./images/activity-2-1x.webp 1x, ./images/activity-2-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./images/activity-2-1x.jpg 1x, ./images/activity-2-2x.jpg 2x">
+                                <img src="#" alt="Мобильные приложения">
+                            </picture>
                         <div class="activity__list-thumb">
                             <p class="activity__text">Мобильные приложения</p>
                         </div></li>
-                        <li class="activity__item"> <img src="./images/box-3.jpg" alt="Дизайнерские решения" width="370">
+                        <li class="activity__item"> 
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./images/activity-3-1x.webp 1x, ./images/activity-3-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./images/activity-3-1x.jpg 1x, ./images/activity-3-2x.jpg 2x">
+                                <img src="#" alt="Дизайнерские решения">
+                            </picture>
                         <div class="activity__list-thumb">
                             <p class="activity__text">Дизайнерские решения</p>
                         </div> </li>
                     </ul>
                 </div>
-            </section> -->
-<!--             
+            </section> 
+            
             <section class="team section">
                 <div class="container">
                     <h2 class="team__heading">Наша команда</h2>
                     <ul class="team__list">
                         <li class="team__item">
-                            <img src="./images/img-4.jpg" alt="Игорь Демьяненко" width="270">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team-1-desktop-1x.webp 1x, ./images/team-1-desktop-2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team-1-desktop-1x.jpg 1x, ./images/team-1-desktop-2x.jpg 2x">
+                        
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team-1-tablet-1x.webp 1x, ./images/team-1-tablet-2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team-1-tablet-1x.jpg 1x, ./images/team-1-tablet-2x.jpg 2x">
+                              
+                            <source media="(min-width: 320px)" 
+                                srcset="./images/team-1-mobile-1x.webp 1x, ./images/team-1-mobile-2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 320px)" 
+                                srcset="./images/team-1-mobile-1x.jpg 1x, ./images/team-1-mobile-2x.jpg 2x">
+                        
+                            <img class="team__img" src="#" alt="Игорь Демьяненко">
+                        </picture>
                             <div class="team__item-wrapper">
                                 <div class="team__member-info">
                                     <h3 class="team__member">Игорь Демьяненко</h3>
@@ -231,7 +270,21 @@
                             </div>
                         </li>
                         <li class="team__item">
-                            <img src="./images/img-5.jpg" alt="Ольга Репина" width="270">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./images/team-2-desktop-1x.webp 1x, ./images/team-2-desktop-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./images/team-2-desktop-1x.jpg 1x, ./images/team-2-desktop-2x.jpg 2x">
+                            
+                                <source media="(min-width: 768px)" srcset="./images/team-2-tablet-1x.webp 1x, ./images/team-2-tablet-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./images/team-2-tablet-1x.jpg 1x, ./images/team-2-tablet-2x.jpg 2x">
+                        
+                                <source media="(min-width: 320px)" srcset="./images/team-2-mobile-1x.webp 1x, ./images/team-2-mobile-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 320px)" srcset="./images/team-2-mobile-1x.jpg 1x, ./images/team-2-mobile-2x.jpg 2x">
+                            
+                                <img class="team__img" src="#" alt="Ольга Репина">
+                            </picture>
                             <div class="team__item-wrapper">
                                 <div class="team__member-info">
                                     <h3 class="team__member">Ольга Репина</h3>
@@ -270,7 +323,21 @@
                             </div>
                         </li>
                         <li class="team__item">
-                            <img src="./images/img-6.jpg" alt="Николай Тарасов" width="270">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./images/team-3-desktop-1x.webp 1x, ./images/team-3-desktop-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./images/team-3-desktop-1x.jpg 1x, ./images/team-3-desktop-2x.jpg 2x">
+                            
+                                <source media="(min-width: 768px)" srcset="./images/team-3-tablet-1x.webp 1x, ./images/team-3-tablet-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./images/team-3-tablet-1x.jpg 1x, ./images/team-3-tablet-2x.jpg 2x">
+                            
+                                <source media="(min-width: 320px)" srcset="./images/team-3-mobile-1x.webp 1x, ./images/team-3-mobile-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 320px)" srcset="./images/team-3-mobile-1x.jpg 1x, ./images/team-3-mobile-2x.jpg 2x">
+                            
+                                <img class="team__img" src="#" alt="Николай Тарасов">
+                            </picture>
                             <div class="team__item-wrapper">
                                 <div class="team__member-info">
                                     <h3 class="team__member">Николай Тарасов</h3>
@@ -309,7 +376,21 @@
                             </div>
                         </li>
                         <li class="team__item">
-                            <img src="./images/img-7.jpg" alt="Михаил Ермаков" width="270">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./images/team-4-desktop-1x.webp 1x, ./images/team-4-desktop-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./images/team-4-desktop-1x.jpg 1x, ./images/team-4-desktop-2x.jpg 2x">
+                            
+                                <source media="(min-width: 768px)" srcset="./images/team-4-tablet-1x.webp 1x, ./images/team-4-tablet-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./images/team-4-tablet-1x.jpg 1x, ./images/team-4-tablet-2x.jpg 2x">
+                            
+                                <source media="(min-width: 320px)" srcset="./images/team-4-mobile-1x.webp 1x, ./images/team-4-mobile-2x.webp 2x"
+                                    type="image/webp">
+                                <source media="(min-width: 320px)" srcset="./images/team-4-mobile-1x.jpg 1x, ./images/team-4-mobile-2x.jpg 2x">
+                            
+                                <img class="team__img" src="#" alt="Михаил Ермаков">
+                            </picture>
                             <div class="team__item-wrapper">
                                 <div class="team__member-info">
                                     <h3 class="team__member">Михаил Ермаков</h3>
@@ -349,8 +430,8 @@
                         </li>
                     </ul>
                 </div>
-            </section>
-             -->
+            </section> 
+             
 <!--             
             <section class="section">
                 <div class="clients container">
