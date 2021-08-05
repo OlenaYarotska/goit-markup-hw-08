@@ -1,6 +1,7 @@
 .hero {
   text-align: center;
   margin: 0 auto;
+  background-size: cover;
 
   @media screen and (max-width: 767px) {
     max-width: 480px;
@@ -93,7 +94,7 @@
   width: 200px;
   height: 50px;
   margin-top: 30px;
-  color: #fff;
+  color: var(--white-color);
   background: var(--accent-color);
   border: none;
   cursor: pointer;

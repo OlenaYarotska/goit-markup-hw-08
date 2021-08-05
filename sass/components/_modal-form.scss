@@ -75,8 +75,6 @@
   }
 }
 .modal-form-checkbox-label {
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
@@ -85,6 +83,15 @@
   margin-bottom: 30px;
   transition: text-shadow var(--transition-duration)
     var(--transition-timing-function);
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 
   &::before {
     content: "";
@@ -113,6 +120,7 @@
     border-color: var(--accent-color);
   }
 }
+
 .modal-form-label-link {
   color: var(--accent-color);
   text-decoration: underline;
