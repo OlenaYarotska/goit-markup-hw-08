@@ -1,11 +1,13 @@
 .burger-button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  line-height: 0;
-  &__icon {
-    width: 40px;
-    height: 40px;
+  @media screen and (max-width: 767px) {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    &__icon {
+      width: 40px;
+      height: 40px;
+    }
   }
   @media screen and (min-width: 768px) {
     display: none;
@@ -29,10 +31,15 @@
   pointer-events: auto;
 }
 .mobile-menu__container {
-  position: relative;
-  margin: 0;
-  padding-top: 48px;
-  padding-left: 40px;
+  @media screen and (max-width: 767px) {
+    position: relative;
+    margin: 0;
+    padding: 40px 48px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 .close-button {
   background-color: transparent;
@@ -55,12 +62,10 @@
 .mobile-menu__close-button {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 16px;
 }
 // opisanie
-.mobile__nav-list {
-  margin-bottom: 230px;
-}
+
 .mobile__nav-item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -111,6 +116,7 @@
 }
 .mobile__social {
   display: flex;
+  flex-wrap: wrap;
 }
 .mobile__social-item {
   &:not(:last-child) {
