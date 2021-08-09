@@ -8,6 +8,7 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  overflow-y: auto;
   transition: opacity var(--transition-duration)
       var(--transition-timing-function),
     visibility var(--transition-duration) var(--transition-timing-function);

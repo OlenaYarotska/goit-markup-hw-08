@@ -105,9 +105,13 @@
 }
 
 .mobile__addres-tel {
-  font-size: 34px;
+  font-size: 8vw;
   line-height: 1.17;
   color: var(--accent-color);
+
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
 }
 .mobile__address-email {
   font-size: 24px;
