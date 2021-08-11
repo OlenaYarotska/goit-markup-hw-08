@@ -23,15 +23,14 @@
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 15px;
+    padding-bottom: 13px;
     padding-right: 0;
   }
   @media screen and (min-width: 1200px) {
     padding-top: 24px;
     padding-bottom: 25px;
   }
-  
 }
 
 .logo {
@@ -92,7 +91,10 @@
     border-radius: 2px;
     background-color: var(--accent-color);
     position: absolute;
-    bottom: -33px;
+    bottom: -38px;
+    @media screen and (min-width: 1200px) {
+      bottom: -33px;
+    }
   }
 }
 

@@ -2,7 +2,7 @@
   background-color: var(--white-color);
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 15px;
   width: 96vw;
   transform: translate(-50%) scale(1);
   padding: 40px;
@@ -22,7 +22,7 @@
   @media screen and (min-width: 1200px) {
     width: 530px;
     top: 50%;
-    transform: translate (-50%, -50%) scale (1);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 .close-btn {

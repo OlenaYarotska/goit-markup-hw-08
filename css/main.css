@@ -223,6 +223,12 @@ img {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 480px) {
+  .mobile__addres-tel {
+    font-size: 34px;
+  }
+}
+
 .mobile__address-email {
   font-size: 24px;
   line-height: 1.16;
@@ -274,7 +280,7 @@ img {
   background-color: var(--white-color);
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 15px;
   width: 96vw;
   transform: translate(-50%) scale(1);
   padding: 40px;
@@ -293,7 +299,7 @@ img {
   .modal {
     width: 530px;
     top: 50%;
-    transform: translate -50%, -50% scale 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -402,6 +408,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
@@ -536,8 +543,8 @@ img {
   .header__nav {
     display: flex;
     justify-content: center;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 15px;
+    padding-bottom: 13px;
     padding-right: 0;
   }
 }
@@ -614,7 +621,13 @@ img {
   border-radius: 2px;
   background-color: var(--accent-color);
   position: absolute;
-  bottom: -33px;
+  bottom: -38px;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__link.active::after {
+    bottom: -33px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1056,6 +1069,7 @@ img {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
 }
 
@@ -1254,6 +1268,7 @@ img {
 
 .filter__content {
   padding: 20px 24px;
+  padding-right: 0;
   border-right: 1px solid var(--filter-border);
   border-left: 1px solid var(--filter-border);
   border-bottom: 1px solid var(--filter-border);
